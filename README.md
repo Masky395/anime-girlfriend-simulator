@@ -1,168 +1,228 @@
 # Anime Girlfriend Simulator 🌸
 
-A lightweight Android app that simulates a cute anime companion with a stylized pseudo-3D character, mood states, affection tracking, and interactive dialogue.
+A fully playable Android dating sim with character interactions, affection tracking, gift system, and progression mechanics.
 
-## Features
-- 🎨 3D-inspired anime character drawn with Compose Canvas
-- 😊 Multiple moods: idle, happy, blush, wave, and talk
-- 💕 Affection meter that increases with interactions
-- 💬 Dynamic dialogue that changes based on mood
-- 📱 Simple, mobile-friendly layout
-- ⚡ Lightweight and fast performance
+## 🎮 Features
 
-## Quick Download & Install
+✨ **Full Game Loop:**
+- Multiple interaction moods (Happy, Blush, Wave, Talk, Sleep, Angry, Sad)
+- Affection meter that grows with interactions
+- Dynamic dialogue that changes based on mood and affection level
+- Energy system and rest mechanic
+- Level progression system
 
-### Option 1: Download Pre-built APK (Easiest)
-Pre-built APKs are available in the **Releases** section:
-1. Go to [Releases](https://github.com/Masky395/anime-girlfriend-simulator/releases)
-2. Download the latest `.apk` file
-3. Transfer to your Android phone or emulator
-4. Tap to install (enable "Install from Unknown Sources" in settings if needed)
+🎁 **Shop & Inventory:**
+- Buy gifts to increase affection
+- Collect items and track inventory
+- Coins earned through level ups
 
-### Option 2: Build from Source
+💾 **Game Systems:**
+- Persistent level and affection tracking
+- Playtime counter
+- Character customization (outfit selection)
+- Home screen with stats overview
 
-#### Prerequisites
-- **Android Studio Narwhal or newer** ([Download](https://developer.android.com/studio))
-- **JDK 17** (included with Android Studio)
-- **Android SDK 35** (installed via Android Studio's SDK Manager)
-- **Git** ([Download](https://git-scm.com/))
-
-#### Step-by-Step Build Guide
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Masky395/anime-girlfriend-simulator.git
-   cd anime-girlfriend-simulator
-   ```
-
-2. **Open in Android Studio**
-   - Launch Android Studio
-   - Click "Open" → Select the `anime-girlfriend-simulator` folder
-   - Wait for Gradle to sync (5-10 minutes on first build)
-
-3. **Build & Run on Emulator**
-   - Click **Run** → **Run 'app'**
-   - Select an emulator or connected Android device
-   - The app will build and launch automatically
-
-4. **Build APK for Distribution**
-   ```bash
-   # Build debug APK (faster, larger)
-   ./gradlew assembleDebug
-   
-   # Build release APK (optimized, smaller)
-   ./gradlew assembleRelease
-   ```
-   - APKs are generated in: `app/build/outputs/apk/`
-   - Transfer to your device and install
-
-5. **Build Android App Bundle (for Play Store)**
-   ```bash
-   ./gradlew bundleRelease
-   ```
-   - Generated in: `app/build/outputs/bundle/release/`
-
-## System Requirements
-- **Minimum Android Version:** Android 7.0 (API 24)
-- **Target Android Version:** Android 15 (API 35)
-- **RAM:** 100MB minimum
-- **Storage:** ~50MB free space
-
-## How to Play
-1. Launch the app
-2. Click mood buttons to interact with your companion:
-   - **Idle** — Default state
-   - **Happy** — Makes her smile and increases affection +5
-   - **Blush** — Makes her blush and increases affection +3
-   - **Wave** — Makes her wave hello and increases affection +4
-   - **Talk** — She listens to you and increases affection
-3. Watch the affection meter increase with each interaction
-4. See dialogue change based on her current mood
-
-## Build Output Files
-After building, you'll find:
-
-| File | Location | Use |
-|------|----------|-----|
-| **Debug APK** | `app/build/outputs/apk/debug/app-debug.apk` | Testing on device |
-| **Release APK** | `app/build/outputs/apk/release/app-release.apk` | Distribution/sideload |
-| **Bundle** | `app/build/outputs/bundle/release/app-release.aab` | Upload to Play Store |
-
-## Architecture
-- **Framework:** Jetpack Compose (modern Android UI)
-- **Language:** Kotlin
-- **Rendering:** Canvas-based 2D graphics
-- **State Management:** Compose remember() composables
-- **Theme:** Material Design 3
-
-## Troubleshooting
-
-### "Gradle sync failed"
-- Update Android Studio to latest version
-- Delete `.gradle` and `.idea` folders
-- Click "Sync Now"
-
-### "SDK 35 not found"
-- Open Android Studio → Tools → SDK Manager
-- Go to SDK Platforms tab
-- Install "Android 15 (API 35)"
-
-### "adb not found" when building
-- Ensure Android Studio is properly installed
-- Add `ANDROID_SDK_ROOT` to your environment variables
-- Restart Android Studio
-
-### APK won't install
-- Enable "Install from Unknown Sources" in phone settings (Security)
-- Use `adb install path/to/app.apk` via terminal
-
-## Future Upgrades
-- 🎮 Full 3D scene using SceneView or libGDX
-- 🎵 Voice lines and sound effects
-- 👗 Character customization (outfits, hairstyles)
-- 📖 Dating sim story progression
-- 🎒 Inventory and gift system
-- 🎬 Animated idle sequences
-- 💾 Save/load game state
-- 🌐 Online leaderboards
-
-## Project Structure
-```
-anime-girlfriend-simulator/
-├── app/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/com/masky395/animegirlfriendsimulator/
-│   │       │   ├── MainActivity.kt
-│   │       │   ├── MainScreen.kt (UI & character drawing)
-│   │       │   └── ui/theme/ (colors & typography)
-│   │       └── AndroidManifest.xml
-│   └── build.gradle.kts
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
-```
-
-## Building for Different Architectures
-```bash
-# ARM64 (most common, ~60MB)
-./gradlew assembleDebug -Pandroid.bundle.enableUncompressed=true
-
-# x86 (emulator, ~70MB)
-./gradlew assembleDebug
-
-# Split ABIs (one per architecture)
-./gradlew bundleRelease
-```
-
-## License
-MIT License — feel free to modify and distribute
-
-## Contributing
-Want to add features? Fork the repo and submit a pull request!
+🎨 **UI:**
+- Beautiful Material Design 3 interface
+- Dark anime-themed color scheme
+- Smooth navigation between screens
+- Responsive mobile layout
 
 ---
 
-**Questions?** Open an issue on GitHub or check the [Android Developer Docs](https://developer.android.com/docs)
+## 📱 Installation for Spectra J3
 
-**Enjoy your anime girlfriend simulator!** 💕
+### **Fastest Way (Option 1):**
+1. Download the APK from [Releases](https://github.com/Masky395/anime-girlfriend-simulator/releases)
+2. Transfer to your Spectra J3 via USB
+3. Go to Settings → Security → Enable "Unknown Sources"
+4. Open Files → Downloads → Tap the APK → Install
+5. Launch and play!
+
+### **Via Android Studio (Option 2):**
+1. Install [Android Studio](https://developer.android.com/studio)
+2. Clone this repo: `git clone https://github.com/Masky395/anime-girlfriend-simulator.git`
+3. Open in Android Studio
+4. Connect your Spectra J3 via USB
+5. Enable USB Debugging on phone (Settings → About → Build Number 7x)
+6. Click Run or use: `./gradlew installDebug`
+
+### **Build Your Own APK (Option 3):**
+```bash
+git clone https://github.com/Masky395/anime-girlfriend-simulator.git
+cd anime-girlfriend-simulator
+./gradlew assembleRelease
+```
+APK will be at: `app/build/outputs/apk/release/app-release.apk`
+
+---
+
+## 🎮 How to Play
+
+### Main Screen:
+- **Level** - Increases every 100 affection points
+- **Affection** - Your relationship progress (0-1000)
+- **Energy** - Used for interactions, recovers by resting
+- **Coins** - Earned by leveling up, spent in shop
+
+### Gameplay:
+1. **Start Playing** - Enter the main interaction screen
+2. **Choose Interactions:**
+   - 😊 **Happy** - +5 affection (costs 5 energy)
+   - 💕 **Blush** - +3 affection (costs 5 energy)
+   - 👋 **Wave** - +4 affection (costs 5 energy)
+   - 💬 **Talk** - +2 affection (costs 5 energy)
+3. **Rest** - Restore energy and happiness
+4. **Shop** - Buy gifts to boost affection
+5. **Inventory** - View collected gifts
+
+---
+
+## 🛠️ Requirements
+
+- **Android Version:** 7.0+ (Spectra J3: ✓ Android 9.0+)
+- **RAM:** 100MB minimum
+- **Storage:** 60MB free space
+- **No internet required** - Fully offline game
+
+---
+
+## 📊 Game Progression
+
+| Affection | Status |
+|-----------|--------|
+| 0-100 | New Friend |
+| 100-300 | Getting Close |
+| 300-600 | Good Friends |
+| 600-1000 | Very Close |
+
+| Level | Coins Earned |
+|-------|--------------|
+| 1-10 | 100 per level |
+| 11-20 | 150 per level |
+| 20+ | 200 per level |
+
+---
+
+## 🎁 Shop Items
+
+| Item | Cost | Effect |
+|------|------|--------|
+| 🌸 Rose Bouquet | 100 | +10 affection |
+| 🍰 Chocolate Cake | 150 | +10 affection |
+| 👗 Pink Dress | 300 | Outfit change |
+| 💎 Diamond Ring | 500 | +10 affection |
+| 🎀 Hair Ribbon | 80 | +10 affection |
+
+---
+
+## 📁 Project Structure
+
+```
+anime-girlfriend-simulator/
+├── app/src/main/
+│   ├── java/com/masky395/animegirlfriendsimulator/
+│   │   ├── MainActivity.kt          # App entry point
+│   │   ├── GameViewModel.kt         # Game state management
+│   │   ├── GameScreen.kt            # All UI screens
+│   │   └── ui/theme/                # Colors & typography
+│   └── AndroidManifest.xml
+├── app/build.gradle.kts             # Build configuration
+└── README.md
+```
+
+---
+
+## 🚀 Build APK
+
+### Debug APK (for testing):
+```bash
+./gradlew assembleDebug
+# Output: app/build/outputs/apk/debug/app-debug.apk
+```
+
+### Release APK (optimized, for sharing):
+```bash
+./gradlew assembleRelease
+# Output: app/build/outputs/apk/release/app-release.apk
+```
+
+### Direct Installation:
+```bash
+./gradlew installDebug      # Auto-installs on connected device
+./gradlew installRelease    # Auto-installs release version
+```
+
+---
+
+## ❓ Troubleshooting
+
+### APK won't install
+- Enable "Install from Unknown Sources" (Settings → Security)
+- Ensure 100MB+ free storage on phone
+- Use latest APK file from Releases
+
+### App crashes on startup
+- Clear app cache: Settings → Apps → Anime Girlfriend → Storage → Clear Cache
+- Reinstall the app
+- Ensure Android 7.0+
+
+### USB not detected
+- Use different USB cable
+- Enable USB Debugging: Settings → About Phone → Build Number (tap 7x)
+- Restart phone and computer
+
+### Can't find Settings menu
+- Swipe down from top to access system settings
+- Look for "Developer Options" after tapping Build Number 7 times
+
+---
+
+## 🎨 Customization
+
+### Change Character Colors
+Edit `GameScreen.kt` color definitions:
+```kotlin
+val skin = Color(0xFFF8D7C6)      // Skin tone
+val hair = Color(0xFF21142C)      // Hair color
+val outfit = Color(0xFF7C3AED)    // Outfit color
+```
+
+### Add More Moods
+In `GameViewModel.kt`, add to `CharacterMood` enum:
+```kotlin
+enum class CharacterMood {
+    IDLE, HAPPY, BLUSH, WAVE, TALK, SLEEP, ANGRY, SAD, EXCITED // Add new mood
+}
+```
+
+---
+
+## 📈 Future Updates
+
+- 🎬 Animated character expressions
+- 🎵 Background music and sound effects
+- 📖 Story mode and character backstory
+- 👗 More outfit customization options
+- 💌 Love letters and messages
+- 🌍 Multiple characters
+- 🏆 Achievement system
+- 💕 Photo mode with character
+
+---
+
+## 📝 License
+
+MIT License - Feel free to modify and share!
+
+---
+
+## 🤝 Contributing
+
+Found a bug? Have a feature idea? Open an issue or submit a pull request!
+
+---
+
+**Ready to meet Luna? Download now and start your anime dating sim adventure! 💕✨**
+
+For detailed installation help, see [QUICK_START.md](QUICK_START.md)
